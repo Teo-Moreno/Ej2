@@ -4,6 +4,32 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        Dictionary<string, int> inventario = new Dictionary<string, int>();
+        Console.WriteLine("Inicializar 3 rescursos.")
+        Console.WriteLine(Funciones.agregarItem(inventario, Funciones.ingresarTexto, Funciones.IngresarNum))
+        Console.WriteLine(Funciones.agregarItem(inventario, Funciones.ingresarTexto, Funciones.IngresarNum))
+        Console.WriteLine(Funciones.agregarItem(inventario, Funciones.ingresarTexto, Funciones.IngresarNum))
+        int modo;
+        do
+        {
+            modo = Funciones.ingresarNumConRango(1,5,"");
+            switch (modo)
+            {
+                case 1:
+                    
+                    break;
+                case 2:
+
+                    break;
+                case 3:
+
+                    break;
+                case 4:
+
+                    break;
+            }
+            Funciones.Esperar();
+            Console.Clear();
+        }while(modo != 5);
     }
 }
