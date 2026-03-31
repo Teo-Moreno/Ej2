@@ -10,7 +10,7 @@ class Funciones
             numCorrect = int.TryParse(Console.ReadLine(), out num);
             if (!numCorrect)
             {
-                Console.WriteLine("No se ha ingresado un número correcto. Tiene que ser sin decimales.");
+                Console.WriteLine($"No se ha ingresado un número correcto. Tiene que ser sin decimales. {(!negativo ? "" : "No puede ser negativo")}");            
             }
             if (negativo == false && num < 0)
             {
@@ -52,7 +52,7 @@ class Funciones
         else
         {
             inventario.Add(item, cantidad);
-            return $"Se agregó el nuevo item {item} correctamente, la cantidad actual es{inventario[item]}.";
+            return $"Se agregó el nuevo item {item} correctamente, la cantidad actual es {inventario[item]}.";
         }
     }
     public static void Esperar() 
