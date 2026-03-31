@@ -25,7 +25,7 @@ class Program
                     Console.WriteLine(Funciones.agregarItem(inventario, Funciones.ingresarTexto("Ingrese el item."), Funciones.IngresarNum("Ingrese la cantidad.", false)));
                     break;
                 case 3:
-                    
+                    Console.WriteLine(Funciones.agregarItem(inventario, Funciones.ingresarTexto("Ingrese el item."), Funciones.IngresarNum("Ingrese la cantidad.", false)));
                     break;
                 case 4:
 
