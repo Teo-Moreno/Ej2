@@ -47,12 +47,12 @@ class Funciones
         if (inventario.ContainsKey(item) )
         {
             inventario[item] = cantidad;
-            return $"Se a agregado {cantidad} a el item {item}, la cantidad actual es {inventario[cantidad]}.";
+            return $"Se a agregado {cantidad} a el item {item}, la cantidad actual es {inventario[item]}.";
         }
         else
         {
             inventario.Add(item, cantidad);
-            return $"Se agregó el nuevo item {item} correctamente, la cantidad actual es{inventario[cantidad]}.";
+            return $"Se agregó el nuevo item {item} correctamente, la cantidad actual es{inventario[item]}.";
         }
     }
     public static void Esperar() 

@@ -5,10 +5,9 @@ class Program
     static void Main(string[] args)
     {
         Dictionary<string, int> inventario = new Dictionary<string, int>();
-        Console.WriteLine("Inicializar 3 rescursos.")
-        Console.WriteLine(Funciones.agregarItem(inventario, Funciones.ingresarTexto, Funciones.IngresarNum))
-        Console.WriteLine(Funciones.agregarItem(inventario, Funciones.ingresarTexto, Funciones.IngresarNum))
-        Console.WriteLine(Funciones.agregarItem(inventario, Funciones.ingresarTexto, Funciones.IngresarNum))
+        Console.WriteLine("Inicializar 3 rescursos.");
+        Console.WriteLine(Funciones.agregarItem(inventario, Funciones.ingresarTexto("Ingrese el item."), Funciones.IngresarNum("Ingrese la cantidad.")));
+        Console.WriteLine(Funciones.agregarItem(inventario, Funciones.ingresarTexto("Ingrese el item."), Funciones.IngresarNum("Ingrese la cantidad.")));
         int modo;
         do
         {
