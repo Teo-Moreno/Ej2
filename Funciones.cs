@@ -55,6 +55,13 @@ class Funciones
             return $"Se agregó el nuevo item {item} correctamente, la cantidad actual es {inventario[item]}.";
         }
     }
+    public static string ConsultarClave(Dictionary<string, int> inventario, string clave)
+    {
+        if (inventario.ContainsKey(item) )
+        {
+            return $"Hay {inventario[item]} del item {item} .";
+        }
+    }
     public static void Esperar() 
     { 
         Console.WriteLine("Ingrese enter para continuar.");
