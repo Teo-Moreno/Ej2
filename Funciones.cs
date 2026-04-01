@@ -46,21 +46,35 @@ class Funciones
     {
         if (inventario.ContainsKey(item) )
         {
-            inventario[item] = cantidad;
-            return $"Se a agregado {cantidad} a el item {item}, la cantidad actual es {inventario[item]}.";
+            if (cantidad < 0 && cantidad * -1 > inventario[item])
+            {
+                return $"Estas consumiendo más de lo que tenes, del item {item} tenes {inventario[item]} unidades.";
+            }
+            if (cantidad < 0 && cantidad * -1 == inventario[item])
+            {
+                inventario[item] += cantidad;
+                return $"Se a consumido todo del item {item}, la nueva cantidad es 0.";
+            }
+            inventario[item] += cantidad;
+            return $"Se actualizó el stock del item {item} por {cantidad}, la cantidad actual es {inventario[item]}.";
         }
         else
         {
-            inventario.Add(item, cantidad);
-            return $"Se agregó el nuevo item {item} correctamente, la cantidad actual es {inventario[item]}.";
+            if (cantidad > 0)
+            {
+                inventario.Add(item, cantidad);
+                return $"Se agregó el nuevo item {item} correctamente, la cantidad actual es {inventario[item]}.";
+            }
+            return "No tenes ese item, ¿qué intentas consumir?";
         }
     }
     public static string ConsultarClave(Dictionary<string, int> inventario, string clave)
     {
-        if (inventario.ContainsKey(item) )
+        if (inventario.ContainsKey(clave) )
         {
-            return $"Hay {inventario[item]} del item {item} .";
+            return $"Hay {inventario[clave]} del item {clave} .";
         }
+        return "No existe ese item";
     }
     public static void Esperar() 
     { 
